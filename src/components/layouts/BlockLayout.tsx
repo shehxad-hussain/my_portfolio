@@ -1,6 +1,6 @@
 import { FC, Fragment, ReactElement, ReactNode } from 'react';
 import { useRouter } from 'next/router';
-import { Navbar } from 'components/blocks/navbar';
+import Navbar  from 'components/blocks/navbar/Navbar';
 import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';
 
