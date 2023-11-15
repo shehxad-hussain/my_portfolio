@@ -2,8 +2,8 @@ import { NextPage } from 'next';
 import { FC, Fragment } from 'react';
 import { Element, Link as ScrollLink } from 'react-scroll';
 // -------- custom component -------- //
-import { Navbar } from 'components/blocks/navbar';
-import { Footer8 } from 'components/blocks/footer';
+import Navbar  from 'components/blocks/navbar/Navbar';
+import Footer8  from 'components/blocks/footer/Footer8';
 import Breadcrumb from 'components/reuseable/Breadcrumb';
 import PageProgress from 'components/common/PageProgress';
 import NextLink from 'components/reuseable/links/NextLink';

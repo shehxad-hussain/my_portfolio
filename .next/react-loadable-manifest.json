@@ -1,10 +1,4 @@
 {
-  "../src/hooks/useIsotope.ts -> isotope-layout": {
-    "id": "../src/hooks/useIsotope.ts -> isotope-layout",
-    "files": [
-      "static/chunks/node_modules_isotope-layout_js_isotope_js.js"
-    ]
-  },
   "_app.tsx -> plugins/scrollcue": {
     "id": "_app.tsx -> plugins/scrollcue",
     "files": [
