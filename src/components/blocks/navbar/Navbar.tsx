@@ -9,16 +9,11 @@ import SocialLinks from 'components/reuseable/SocialLinks';
 import ListItemLink from 'components/reuseable/links/ListItemLink';
 import DropdownToggleLink from 'components/reuseable/links/DropdownToggleLink';
 // -------- partial header component -------- //
-import Info from './partials/Info';
-import Search from './partials/Search';
 import Social from './partials/Social';
-import Signin from './partials/Signin';
-import Signup from './partials/Signup';
 import Language from './partials/Language';
-import MiniCart from './partials/MiniCart';
 // -------- data -------- //
 import {
-  pages
+  Pages,About,Services,Blogs,Contact
 } from 'data/navigation';
 
 // ===================================================================
@@ -60,12 +55,12 @@ const Navbar: FC<NavbarProps> = (props) => {
   const headerContent = (
     <Fragment>
       <div className="navbar-brand w-100">
-        <NextLink href="/" title={<img alt="logo" src={`/img/${logo}.png`} srcSet={`/img/${logo}@2x.png 2x`} />} />
+        <NextLink className='display-1 col-lg-6 col-xxl-5 text-lg-start' href="/" title="SHEHZAD" />
       </div>
 
       <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
         <div className="offcanvas-header d-lg-none">
-          <h3 className="text-white fs-30 mb-0">Sandboxxx</h3>
+          <h3 className="text-white fs-30 mb-0">SHEHZAD</h3>
           <button type="button" aria-label="Close" data-bs-dismiss="offcanvas" className="btn-close btn-close-white" />
         </div>
 
@@ -75,10 +70,10 @@ const Navbar: FC<NavbarProps> = (props) => {
 
             {/*  ===================== pages nav item  ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Pages" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="Pages" className="nav-link" />
 
               <ul className="dropdown-menu">
-                {pages.map(({ id, title, children }) => {
+                {Pages.map(({ id, title, children }) => {
                   return (
                     <li className="dropdown dropdown-submenu dropend" key={id}>
                       <DropdownToggleLink title={title} />
@@ -87,16 +82,15 @@ const Navbar: FC<NavbarProps> = (props) => {
                   );
                 })}
 
-                <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
               </ul>
             </li>
 
             {/* ===================== projects nav item  ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Pages" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="About" className="nav-link dropdown-toggle" />
 
               <ul className="dropdown-menu">
-                {pages.map(({ id, title, children }) => {
+                {About.map(({ id, title, children }) => {
                   return (
                     <li className="dropdown dropdown-submenu dropend" key={id}>
                       <DropdownToggleLink title={title} />
@@ -105,15 +99,14 @@ const Navbar: FC<NavbarProps> = (props) => {
                   );
                 })}
 
-                <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
               </ul>
             </li>
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Pages" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="Services" className="nav-link dropdown-toggle" />
 
               <ul className="dropdown-menu">
-                {pages.map(({ id, title, children }) => {
+                {Services.map(({ id, title, children }) => {
                   return (
                     <li className="dropdown dropdown-submenu dropend" key={id}>
                       <DropdownToggleLink title={title} />
@@ -122,16 +115,15 @@ const Navbar: FC<NavbarProps> = (props) => {
                   );
                 })}
 
-                <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
               </ul>
             </li>
 
             {/* ===================== blocks nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Pages" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="Blogs" className="nav-link dropdown-toggle" />
 
               <ul className="dropdown-menu">
-                {pages.map(({ id, title, children }) => {
+                { Blogs.map(({ id, title, children }) => {
                   return (
                     <li className="dropdown dropdown-submenu dropend" key={id}>
                       <DropdownToggleLink title={title} />
@@ -140,16 +132,15 @@ const Navbar: FC<NavbarProps> = (props) => {
                   );
                 })}
 
-                <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
               </ul>
             </li>
 
             {/* ===================== documentation nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Pages" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="Contact" className="nav-link dropdown-toggle" />
 
               <ul className="dropdown-menu">
-                {pages.map(({ id, title, children }) => {
+                {Contact.map(({ id, title, children }) => {
                   return (
                     <li className="dropdown dropdown-submenu dropend" key={id}>
                       <DropdownToggleLink title={title} />
@@ -158,7 +149,6 @@ const Navbar: FC<NavbarProps> = (props) => {
                   );
                 })}
 
-                <ListItemLink href="/pricing" title="Pricing" linkClassName="dropdown-item" />
               </ul>
             </li>
           </ul>
@@ -166,9 +156,9 @@ const Navbar: FC<NavbarProps> = (props) => {
           {/* ============= show contact info in the small device sidebar ============= */}
           <div className="offcanvas-footer d-lg-none">
             <div>
-              <NextLink title="info@email.com" className="link-inverse" href="mailto:first.last@email.com" />
+              <NextLink title="shehzuali5@gmail.com" className="link-inverse" href="mailto:first.last@email.com" />
               <br />
-              <NextLink href="tel:0123456789" title="00 (123) 456 78 90" />
+              <NextLink href="tel:0123456789" title="03554949524" />
               <br />
               <SocialLinks />
             </div>
@@ -246,21 +236,6 @@ const Navbar: FC<NavbarProps> = (props) => {
           <div className="container flex-lg-row flex-nowrap align-items-center">{headerContent}</div>
         )}
       </nav>
-
-      {/* ============= signin modal ============= */}
-      <Signin />
-
-      {/* ============= signup modal ============= */}
-      <Signup />
-
-      {/* ============= info sidebar ============= */}
-      {info && <Info />}
-
-      {/* ============= show search box ============= */}
-      {search && <Search />}
-
-      {/* ============= cart sidebar ============= */}
-      {cart && <MiniCart />}
     </Fragment>
   );
 };
