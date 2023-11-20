@@ -1,20 +1,18 @@
-import Link from 'next/link';
-import LinkType from 'types/link';
-import { FC, Fragment, ReactElement, useRef } from 'react';
+import Link from "next/link";
+import LinkType from "types/link";
+import { FC, Fragment, ReactElement, useRef } from "react";
 // -------- custom hook -------- //
-import useSticky from 'hooks/useSticky';
+import useSticky from "hooks/useSticky";
 // -------- custom component -------- //
-import NextLink from 'components/reuseable/links/NextLink';
-import SocialLinks from 'components/reuseable/SocialLinks';
-import ListItemLink from 'components/reuseable/links/ListItemLink';
-import DropdownToggleLink from 'components/reuseable/links/DropdownToggleLink';
+import NextLink from "components/reuseable/links/NextLink";
+import SocialLinks from "components/reuseable/SocialLinks";
+import ListItemLink from "components/reuseable/links/ListItemLink";
+import DropdownToggleLink from "components/reuseable/links/DropdownToggleLink";
 // -------- partial header component -------- //
-import Social from './partials/Social';
-import Language from './partials/Language';
+import Social from "./partials/Social";
+import Language from "./partials/Language";
 // -------- data -------- //
-import {
-  Pages,About,Services,Blogs,Contact
-} from 'data/navigation';
+import { Pages, About, Services, Blogs, Contact } from "data/navigation";
 
 // ===================================================================
 type NavbarProps = {
@@ -33,21 +31,38 @@ type NavbarProps = {
 // ===================================================================
 
 const Navbar: FC<NavbarProps> = (props) => {
-  const { navClassName, info, search, social, language, button, cart, fancy, navOtherClass, stickyBox, logoAlt } =
-    props;
+  const {
+    navClassName,
+    info,
+    search,
+    social,
+    language,
+    button,
+    cart,
+    fancy,
+    navOtherClass,
+    stickyBox,
+    logoAlt,
+  } = props;
 
   const sticky = useSticky(350);
   const navbarRef = useRef<HTMLElement | null>(null);
 
   // dynamically render the logo
-  const logo = sticky ? 'logo-dark' : logoAlt ?? 'logo-dark';
+  const logo = sticky ? "logo-dark" : logoAlt ?? "logo-dark";
   // dynamically added navbar classname
-  const fixedClassName = 'navbar navbar-expand-lg center-nav transparent navbar-light navbar-clone fixed';
+  const fixedClassName =
+    "navbar navbar-expand-lg center-nav transparent navbar-light navbar-clone fixed";
 
   // render inner nav item links
   const renderLinks = (links: LinkType[]) => {
     return links.map((item) => (
-      <ListItemLink href={item.url} title={item.title} linkClassName="dropdown-item" key={item.id} />
+      <ListItemLink
+        href={item.url}
+        title={item.title}
+        linkClassName="dropdown-item"
+        key={item.id}
+      />
     ));
   };
 
@@ -55,19 +70,30 @@ const Navbar: FC<NavbarProps> = (props) => {
   const headerContent = (
     <Fragment>
       <div className="navbar-brand w-100">
-        <NextLink className='display-1 col-lg-6 col-xxl-5 text-lg-start' href="/" title="SHEHZAD" />
+        <NextLink
+          className="display-1 col-lg-6 col-xxl-5 text-lg-start"
+          href="/"
+          title="SHEHZAD"
+        />
       </div>
 
-      <div id="offcanvas-nav" data-bs-scroll="true" className="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+      <div
+        id="offcanvas-nav"
+        data-bs-scroll="true"
+        className="navbar-collapse offcanvas offcanvas-nav offcanvas-start"
+      >
         <div className="offcanvas-header d-lg-none">
           <h3 className="text-white fs-30 mb-0">SHEHZAD</h3>
-          <button type="button" aria-label="Close" data-bs-dismiss="offcanvas" className="btn-close btn-close-white" />
+          <button
+            type="button"
+            aria-label="Close"
+            data-bs-dismiss="offcanvas"
+            className="btn-close btn-close-white"
+          />
         </div>
 
         <div className="offcanvas-body ms-lg-auto d-flex flex-column h-100">
           <ul className="navbar-nav">
-           
-
             {/*  ===================== pages nav item  ===================== */}
             <li className="nav-item dropdown">
               <DropdownToggleLink title="Pages" className="nav-link" />
@@ -81,13 +107,12 @@ const Navbar: FC<NavbarProps> = (props) => {
                     </li>
                   );
                 })}
-
               </ul>
             </li>
 
             {/* ===================== projects nav item  ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="About" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="About" className="nav-link " />
 
               <ul className="dropdown-menu">
                 {About.map(({ id, title, children }) => {
@@ -98,12 +123,11 @@ const Navbar: FC<NavbarProps> = (props) => {
                     </li>
                   );
                 })}
-
               </ul>
             </li>
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Services" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="Services" className="nav-link " />
 
               <ul className="dropdown-menu">
                 {Services.map(({ id, title, children }) => {
@@ -114,16 +138,15 @@ const Navbar: FC<NavbarProps> = (props) => {
                     </li>
                   );
                 })}
-
               </ul>
             </li>
 
             {/* ===================== blocks nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Blogs" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="Blogs" className="nav-link " />
 
               <ul className="dropdown-menu">
-                { Blogs.map(({ id, title, children }) => {
+                {Blogs.map(({ id, title, children }) => {
                   return (
                     <li className="dropdown dropdown-submenu dropend" key={id}>
                       <DropdownToggleLink title={title} />
@@ -131,13 +154,12 @@ const Navbar: FC<NavbarProps> = (props) => {
                     </li>
                   );
                 })}
-
               </ul>
             </li>
 
             {/* ===================== documentation nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Contact" className="nav-link dropdown-toggle" />
+              <DropdownToggleLink title="Contact" className="nav-link " />
 
               <ul className="dropdown-menu">
                 {Contact.map(({ id, title, children }) => {
@@ -148,7 +170,6 @@ const Navbar: FC<NavbarProps> = (props) => {
                     </li>
                   );
                 })}
-
               </ul>
             </li>
           </ul>
@@ -156,7 +177,11 @@ const Navbar: FC<NavbarProps> = (props) => {
           {/* ============= show contact info in the small device sidebar ============= */}
           <div className="offcanvas-footer d-lg-none">
             <div>
-              <NextLink title="shehzuali5@gmail.com" className="link-inverse" href="mailto:first.last@email.com" />
+              <NextLink
+                title="shehzuali5@gmail.com"
+                className="link-inverse"
+                href="mailto:first.last@email.com"
+              />
               <br />
               <NextLink href="tel:0123456789" title="03554949524" />
               <br />
@@ -175,7 +200,11 @@ const Navbar: FC<NavbarProps> = (props) => {
           {/* ============= info button ============= */}
           {info && (
             <li className="nav-item">
-              <a className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info">
+              <a
+                className="nav-link"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvas-info"
+              >
                 <i className="uil uil-info-circle" />
               </a>
             </li>
@@ -184,7 +213,11 @@ const Navbar: FC<NavbarProps> = (props) => {
           {/* ============= search icon button ============= */}
           {search && (
             <li className="nav-item">
-              <a className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search">
+              <a
+                className="nav-link"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvas-search"
+              >
                 <i className="uil uil-search" />
               </a>
             </li>
@@ -212,7 +245,11 @@ const Navbar: FC<NavbarProps> = (props) => {
 
           {/* ============= humburger button for small device ============= */}
           <li className="nav-item d-lg-none">
-            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvas-nav" className="hamburger offcanvas-nav-btn">
+            <button
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas-nav"
+              className="hamburger offcanvas-nav-btn"
+            >
               <span />
             </button>
           </li>
@@ -223,7 +260,11 @@ const Navbar: FC<NavbarProps> = (props) => {
 
   return (
     <Fragment>
-      {stickyBox && <div style={{ paddingTop: sticky ? navbarRef.current?.clientHeight : 0 }} />}
+      {stickyBox && (
+        <div
+          style={{ paddingTop: sticky ? navbarRef.current?.clientHeight : 0 }}
+        />
+      )}
 
       <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName}>
         {fancy ? (
@@ -233,7 +274,9 @@ const Navbar: FC<NavbarProps> = (props) => {
             </div>
           </div>
         ) : (
-          <div className="container flex-lg-row flex-nowrap align-items-center">{headerContent}</div>
+          <div className="container flex-lg-row flex-nowrap align-items-center">
+            {headerContent}
+          </div>
         )}
       </nav>
     </Fragment>
@@ -248,8 +291,8 @@ Navbar.defaultProps = {
   search: false,
   language: false,
   stickyBox: true,
-  navOtherClass: 'navbar-other w-100 d-flex ms-auto',
-  navClassName: 'navbar navbar-expand-lg center-nav transparent navbar-light'
+  navOtherClass: "navbar-other w-100 d-flex ms-auto",
+  navClassName: "navbar navbar-expand-lg center-nav transparent navbar-light",
 };
 
 export default Navbar;
