@@ -11,13 +11,13 @@ const Hero16: FC = () => {
       <div className="container pt-12 pt-md-14 pb-14 pb-md-16">
         <div className="row gy-10 gy-md-13 gy-lg-0 align-items-center">
           <div className="col-md-8 col-lg-5 d-flex position-relative mx-auto">
-            <div className="img-mask mask-1" style={slideInDownAnimate('0ms')}>
-              <img src="/img/photos/about17.jpg" srcSet="/img/photos/about17@2x.jpg 2x" alt="" />
+            <div className="img-mask" style={slideInDownAnimate('0ms')}>
+              <img src="/img/photos/1.jpg" srcSet="/img/photos/about17@2x.jpg 2x" alt="" />
             </div>
 
             <div
               className="card shadow-lg position-absolute"
-              style={{ right: '2%', bottom: '10%', ...slideInDownAnimate('300ms') }}
+              style={{ right: '2%', bottom: '5%', ...slideInDownAnimate('300ms') }}
             >
               <div className="card-body py-4 px-5">
                 <div className="d-flex flex-row align-items-center">
@@ -38,12 +38,12 @@ const Hero16: FC = () => {
 
           <div className="col-lg-6 offset-lg-1 col-xxl-5 text-center text-lg-start">
             <h1 className="display-1 mb-5" style={slideInDownAnimate('600ms')}>
-              I'm User Interface Designer &amp; Developer.
+                I'm a Front End  Web Developer.
             </h1>
 
             <p className="lead fs-25 lh-sm mb-7 px-md-10 px-lg-0" style={slideInDownAnimate('900ms')}>
-              Hello! I'm Julia, a freelance user interface designer &amp; developer based in London. I’m very passionate
-              about the work that I do.
+            "Hello! I'm Shehzad Hussain, a freelance frontend web developer with expertise in <br></br>
+            user interface design.I'm based in Pakistan and very passionate about creating compelling and user-friendly digital experiences.
             </p>
 
             <div className="d-flex justify-content-center justify-content-lg-start">
