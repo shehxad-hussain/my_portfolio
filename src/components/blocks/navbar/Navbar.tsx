@@ -96,7 +96,7 @@ const Navbar: FC<NavbarProps> = (props) => {
           <ul className="navbar-nav">
             {/*  ===================== pages nav item  ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Pages" className="nav-link" />
+              <DropdownToggleLink title="Home" className="nav-link" />
 
               <ul className="dropdown-menu">
                 {Pages.map(({ id, title, children }) => {
@@ -143,7 +143,7 @@ const Navbar: FC<NavbarProps> = (props) => {
 
             {/* ===================== blocks nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Blogs" className="nav-link " />
+              <DropdownToggleLink title="Portfolio" className="nav-link " />
 
               <ul className="dropdown-menu">
                 {Blogs.map(({ id, title, children }) => {
