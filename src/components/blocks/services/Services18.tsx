@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import { FC } from "react";
 // -------- hook -------- //
-import useProgressbar from 'hooks/useProgressbar';
+import useProgressbar from "hooks/useProgressbar";
 // -------- data -------- //
-import { skill1 } from 'data/skill';
-import { serviceList8 } from 'data/service';
+import { skill1 } from "data/skill";
+import { serviceList8 } from "data/service";
 
 const Services18: FC = () => {
   // used for the animated line
@@ -18,7 +18,10 @@ const Services18: FC = () => {
               {skill1.map(({ id, title, percent, color }) => (
                 <li key={id}>
                   <p>{title}</p>
-                  <div className={`progressbar line soft-${color}`} data-value={percent} />
+                  <div
+                    className={`progressbar line soft-${color}`}
+                    data-value={percent}
+                  />
                 </li>
               ))}
             </ul>
@@ -27,9 +30,11 @@ const Services18: FC = () => {
           <div className="col-lg-6">
             <h2 className="display-4 mb-3">What I Do?</h2>
             <p className="lead fs-20 mb-5">
-              Duis mollis est commodo luctus nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis
-              risus eget urna mollis ornare vel. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus
-              magna, vel scelerisque nisl.
+              I specialize in crafting interactive websites using JavaScript,
+              React, Next, and Tailwind CSS. With a keen eye for design and
+              functionality, I bring ideas to life in a modern and responsive
+              manner. Let's collaborate to develop your next digital
+              masterpiece!.
             </p>
           </div>
         </div>
