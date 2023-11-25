@@ -272,25 +272,25 @@ export const serviceList8 = [
     id: 1,
     Icon: Browser,
     title: 'HTML&CSS',
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.`
+    description: `I am a proficient HTML and CSS, I create sleek, dynamic, and user-friendly websites. I specialize in crafting engaging web experiences.`
   },
   {
     id: 2,
     Icon: SmartphoneTwo,
     title: 'Javascript',
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.`
+    description: `I bring ideas to life with JavaScript, crafting dynamic and interactive web solutions across a spectrum of successful projects.`
   },
   {
     id: 3,
     Icon: SettingsThree,
     title: 'React Js',
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.`
+    description: `Proficient in React.js, I leverage its power to build modern, responsive, and user-friendly interfaces, delivering seamless and engaging web experiences.`
   },
   {
     id: 4,
     title: 'Next Js',
     Icon: SearchTwo,
-    description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.`
+    description: `Experienced in Next.js, I utilize its capabilities to create high-performance, SEO-friendly web applications with enhanced user experiences.`
   }
 ];
 
