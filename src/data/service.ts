@@ -271,24 +271,24 @@ export const serviceList8 = [
   {
     id: 1,
     Icon: Browser,
-    title: 'Web Design',
+    title: 'HTML&CSS',
     description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.`
   },
   {
     id: 2,
     Icon: SmartphoneTwo,
-    title: 'Mobile Design',
+    title: 'Javascript',
     description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.`
   },
   {
     id: 3,
     Icon: SettingsThree,
-    title: 'Development',
+    title: 'React Js',
     description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.`
   },
   {
     id: 4,
-    title: 'SEO',
+    title: 'Next Js',
     Icon: SearchTwo,
     description: `Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo cum sociis natoque magnis.`
   }
