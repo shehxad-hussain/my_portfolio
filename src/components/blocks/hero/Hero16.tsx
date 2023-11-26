@@ -41,7 +41,7 @@ const Hero16: FC = () => {
                 I'm a Front End  Web Developer.
             </h1>
 
-            <p className="lead fs-25 lh-sm mb-7 px-md-10 px-lg-0" style={slideInDownAnimate('900ms')}>
+            <p className="lead fs-25 lh-sm mb-6 px-md-10 px-lg-0" style={slideInDownAnimate('900ms')}>
             "Hello! I'm Shehzad Hussain, a freelance frontend web developer with expertise in <br></br>
             user interface design.I'm based in Pakistan and very passionate about creating compelling and user-friendly digital experiences.
             </p>
