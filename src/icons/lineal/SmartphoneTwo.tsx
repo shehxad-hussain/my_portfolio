@@ -1,9 +1,11 @@
 import IconProps from 'types/icon';
+import img from "./js.png";
 
 const SmartphoneTwo = ({ className }: IconProps) => {
   return (
+    
     <svg
-      xmlns="http://www.w3.org/2000/svg"
+      xmlns="./js"
       viewBox="0 0 306.7 409.6"
       className={`svg-inject icon-svg ${className || 'icon-svg-sm text-red mb-3'}`}
     >

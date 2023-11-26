@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import Email from 'icons/lineal/Email';
-import SocialLinks from 'components/reuseable/SocialLinks';
+import { FC } from "react";
+import Email from "icons/lineal/Email";
+import SocialLinks from "components/reuseable/SocialLinks";
 
 const Contact10: FC = () => {
   return (
@@ -11,10 +11,13 @@ const Contact10: FC = () => {
             <div className="row gx-md-8 gx-xl-12 gy-10">
               <div className="col-lg-6">
                 <Email />
-                <h2 className="display-4 mb-3 pe-lg-10">If you like what you see, let's work together.</h2>
+                <h2 className="display-4 mb-3 pe-lg-10">
+                  If you like what you see, let's work together.
+                </h2>
                 <p className="lead pe-lg-12 mb-0">
-                  I bring rapid solutions to make the life of my clients easier. Have any questions? Reach out to me
-                  from this contact form and I will get back to you shortly.
+                  I bring rapid solutions to make the life of my clients easier.
+                  Have any questions? Reach out to me from this contact form and
+                  I will get back to you shortly.
                 </p>
               </div>
 
@@ -35,7 +38,9 @@ const Contact10: FC = () => {
                         />
 
                         <label htmlFor="frm_name">Name *</label>
-                        <div className="invalid-feedback">Please enter your name.</div>
+                        <div className="invalid-feedback">
+                          Please enter your name.
+                        </div>
                       </div>
                     </div>
 
@@ -53,7 +58,9 @@ const Contact10: FC = () => {
 
                         <label htmlFor="frm_email">Email *</label>
                         <div className="valid-feedback">Looks good!</div>
-                        <div className="invalid-feedback">Please provide a valid email address.</div>
+                        <div className="invalid-feedback">
+                          Please provide a valid email address.
+                        </div>
                       </div>
                     </div>
 
@@ -70,7 +77,9 @@ const Contact10: FC = () => {
 
                         <label htmlFor="frm_message">Message *</label>
                         <div className="valid-feedback">Looks good!</div>
-                        <div className="invalid-feedback">Please enter your messsage.</div>
+                        <div className="invalid-feedback">
+                          Please enter your messsage.
+                        </div>
                       </div>
                     </div>
 
