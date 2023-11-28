@@ -11,8 +11,7 @@ import DropdownToggleLink from "components/reuseable/links/DropdownToggleLink";
 // -------- partial header component -------- //
 import Social from "./partials/Social";
 import Language from "./partials/Language";
-// -------- data -------- //
-import { Pages, About, Services, Blogs, Contact } from "data/navigation";
+
 
 // ===================================================================
 type NavbarProps = {
@@ -98,79 +97,33 @@ const Navbar: FC<NavbarProps> = (props) => {
             <li className="nav-item dropdown">
               <DropdownToggleLink title="Home" className="nav-link" />
 
-              <ul className="dropdown-menu">
-                {Pages.map(({ id, title, children }) => {
-                  return (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink title={title} />
-                      <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                    </li>
-                  );
-                })}
-              </ul>
+             
             </li>
 
             {/* ===================== projects nav item  ===================== */}
             <li className="nav-item dropdown">
               <DropdownToggleLink title="About" className="nav-link " />
 
-              <ul className="dropdown-menu">
-                {About.map(({ id, title, children }) => {
-                  return (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink title={title} />
-                      <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                    </li>
-                  );
-                })}
-              </ul>
+            
             </li>
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item dropdown">
               <DropdownToggleLink title="Services" className="nav-link " />
 
-              <ul className="dropdown-menu">
-                {Services.map(({ id, title, children }) => {
-                  return (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink title={title} />
-                      <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                    </li>
-                  );
-                })}
-              </ul>
+  
             </li>
 
             {/* ===================== blocks nav item ===================== */}
             <li className="nav-item dropdown">
               <DropdownToggleLink title="Portfolio" className="nav-link " />
 
-              <ul className="dropdown-menu">
-                {Blogs.map(({ id, title, children }) => {
-                  return (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink title={title} />
-                      <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                    </li>
-                  );
-                })}
-              </ul>
+       
             </li>
 
             {/* ===================== documentation nav item ===================== */}
             <li className="nav-item dropdown">
               <DropdownToggleLink title="Contact" className="nav-link " />
 
-              <ul className="dropdown-menu">
-                {Contact.map(({ id, title, children }) => {
-                  return (
-                    <li className="dropdown dropdown-submenu dropend" key={id}>
-                      <DropdownToggleLink title={title} />
-                      <ul className="dropdown-menu">{renderLinks(children)}</ul>
-                    </li>
-                  );
-                })}
-              </ul>
             </li>
           </ul>
 
