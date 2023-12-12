@@ -79,7 +79,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sandbox - Modern & Multipurpose NextJS Template</title>
+        <title>Shehzad Hussain Portfolio</title>
       </Head>
 
       <ThemeProvider>

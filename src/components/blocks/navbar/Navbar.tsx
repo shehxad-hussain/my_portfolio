@@ -12,7 +12,6 @@ import DropdownToggleLink from "components/reuseable/links/DropdownToggleLink";
 import Social from "./partials/Social";
 import Language from "./partials/Language";
 
-
 // ===================================================================
 type NavbarProps = {
   info?: boolean;
@@ -27,6 +26,7 @@ type NavbarProps = {
   button?: ReactElement;
   navOtherClass?: string;
 };
+
 // ===================================================================
 
 const Navbar: FC<NavbarProps> = (props) => {
@@ -86,7 +86,7 @@ const Navbar: FC<NavbarProps> = (props) => {
           <button
             type="button"
             aria-label="Close"
-            data-bs-dismiss="offcanvas"
+            data-bs-dismiss="offcanvas"       
             className="btn-close btn-close-white"
           />
         </div>
@@ -95,35 +95,42 @@ const Navbar: FC<NavbarProps> = (props) => {
           <ul className="navbar-nav">
             {/*  ===================== pages nav item  ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Home" className="nav-link" />
-
-             
+              <DropdownToggleLink title="Home" className="nav-link" href="#" />
             </li>
 
             {/* ===================== projects nav item  ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="About" className="nav-link " />
-
-            
+              <DropdownToggleLink
+                title="About"
+                className="nav-link "
+                href="/hero"
+              />
             </li>
             {/* ===================== blog nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Services" className="nav-link " />
-
-  
+              <DropdownToggleLink
+                title="Services"
+                className="nav-link "
+                href="#/services"
+              />
             </li>
 
             {/* ===================== blocks nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Portfolio" className="nav-link " />
-
-       
+              <DropdownToggleLink
+                title="Portfolio"
+                className="nav-link "
+                href="#/portfolio"
+              />
             </li>
 
             {/* ===================== documentation nav item ===================== */}
             <li className="nav-item dropdown">
-              <DropdownToggleLink title="Contact" className="nav-link " />
-
+              <DropdownToggleLink
+                title="Contact"
+                className="nav-link "
+                href="#/contact"
+              />
             </li>
           </ul>
 
