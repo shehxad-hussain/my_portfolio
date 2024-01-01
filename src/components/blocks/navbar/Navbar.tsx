@@ -111,7 +111,7 @@ const Navbar: FC<NavbarProps> = (props) => {
               <DropdownToggleLink
                 title="Services"
                 className="nav-link "
-                href="#/services"
+                href="/services"
               />
             </li>
 
@@ -120,7 +120,7 @@ const Navbar: FC<NavbarProps> = (props) => {
               <DropdownToggleLink
                 title="Portfolio"
                 className="nav-link "
-                href="#/portfolio"
+                href="/portfolio"
               />
             </li>
 
@@ -129,7 +129,7 @@ const Navbar: FC<NavbarProps> = (props) => {
               <DropdownToggleLink
                 title="Contact"
                 className="nav-link "
-                href="#/contact"
+                href="#contact"
               />
             </li>
           </ul>
