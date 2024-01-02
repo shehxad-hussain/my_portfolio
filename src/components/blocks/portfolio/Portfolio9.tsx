@@ -32,7 +32,7 @@ const Portfolio9: FC = () => {
 
               <div className="col-lg-7 offset-lg-1 align-self-end">
                 <figure>
-                  <img className="img-fluid" src="/img/photos/f1.png" srcSet="/img/photos/f1@2x.png 2x" alt="" />
+                  <img className="img-fluid" src="/img/photos/personal website.png" srcSet="/img/photos/f1@2x.png 2x" alt="" />
                 </figure>
               </div>
             </div>
