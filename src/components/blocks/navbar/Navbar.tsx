@@ -103,7 +103,7 @@ const Navbar: FC<NavbarProps> = (props) => {
               <DropdownToggleLink
                 title="About"
                 className="nav-link "
-                href="#hero"
+                href="#about"
               />
             </li>
             {/* ===================== blog nav item ===================== */}
